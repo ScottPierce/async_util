@@ -1,5 +1,5 @@
 name: async_util
-version: 0.1.0
+version: 0.1.1
 description: Utility classes and functions to make async operations with dart easier
 author: Scott Pierce <spierce7@gmail.com>
 homepage: https://github.com/ScottPierce/async_util
