@@ -1,9 +1,9 @@
 part of async_util;
 
-/// A class for limiting the number of async tasks that are pending at a given
-/// time.
+/// A class for limiting the number of async tasks that are pending in the async
+/// queue at a given time.
 ///
-///     final limiter = new Limiter(1); // Creates a
+///     final limiter = new Limiter(1);
 ///     limiter.execute(() async => await new Future(() => print('Guaranteed to run first')));
 ///     limiter.execute(() => print('Guaranteed to run second'));
 class Limiter {
