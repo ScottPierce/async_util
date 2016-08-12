@@ -9,7 +9,7 @@ A class for limiting the number of async tasks that are pending in the
 async queue at a given time.
 
 ```Dart
-// Only allow a single task to be pending in the async queue.
+// Only allow a single task to be pending in the async queue at a time.
 final limiter = new Limiter(1);
 // Task 1
 limiter.execute(() async => await new Future(() => print('Guaranteed to run first')));
