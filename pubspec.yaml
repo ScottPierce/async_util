@@ -2,7 +2,7 @@ name: async_util
 version: 0.0.1
 description: Utility classes and functions to make async operations with dart easier
 author: Scott Pierce
-homepage: https://github.com/spierce7/async_util
+homepage: https://github.com/ScottPierce/async_util
 
 environment:
   sdk: '>=1.0.0 <2.0.0'
