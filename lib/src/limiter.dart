@@ -7,15 +7,15 @@ part of async_util;
 ///     limiter.execute(() async => await new Future(() => print('Guaranteed to run first')));
 ///     limiter.execute(() => print('Guaranteed to run second'));
 class Limiter {
-  final int numTasksToRunInParallel;
+  final int numParallelTasks;
   final Queue<_ExecutorItem> _queue = new Queue();
 
   int _tasksExecuting = 0;
 
-  Limiter(this.numTasksToRunInParallel);
+  Limiter(this.numParallelTasks);
 
   Future<dynamic> execute(LimiterTask task) {
-    if (_tasksExecuting < numTasksToRunInParallel) {
+    if (_tasksExecuting < numParallelTasks) {
       return _executeTask(task);
     } else {
       Completer<dynamic> completer = new Completer();
